@@ -1,4 +1,5 @@
 package at.mow.project.schoolcheck;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -24,19 +25,15 @@ public class DemoArray {
             int n2 = randomNumber2 - 1;
             int n3 = randomNumber3 - 1;
 
-            System.out.println(phrase1[n1]+phrase2[n2]+phrase3[n3]);
+            System.out.println(phrase1[n1] + phrase2[n2] + phrase3[n3]);
 
 
         }
 
-            System.out.println("Fertig, alle Sätze generiert.");
-
-
-
-
-        }
-
-
+        System.out.println("Fertig, alle Sätze generiert.");
 
 
     }
+
+
+}
