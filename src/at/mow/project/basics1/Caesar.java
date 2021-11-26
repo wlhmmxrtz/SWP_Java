@@ -49,10 +49,9 @@ public class Caesar {
             return encryptArray;
 
         }
-    public static char[] entschluesseln(int offset, char[] charArray) {
+    public static char[] decryptword(int offset, char[] charArray) {
 
         char[] cryptArray = new char[charArray.length];
-        // erstmal ein leeres Char Array erstellen
 
         int verschiebung;
 
@@ -60,9 +59,6 @@ public class Caesar {
 
             if (charArray[i] - offset < 0)  verschiebung =
                     charArray[i] - offset + 128;
-
-                // nach Verschiebung kleiner 0? Wenn ja, dann
-                // 128 addieren
 
             else verschiebung = (charArray[i] - offset)%128;
 
