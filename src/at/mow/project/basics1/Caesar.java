@@ -3,6 +3,8 @@ package at.mow.project.basics1;
 import java.util.Scanner;
 
 public class Caesar {
+    private static int verschiebung;
+
     public static void main(String[] args) {
 
 
@@ -30,6 +32,21 @@ public class Caesar {
             }
             System.out.println("\n");
             System.out.println("Wollen sie das Wort wieder entschlüsseln?");
+            System.out.println("geben sie dazu die 1 ein, mit der 2 beenden sie dieses Programm.");
+
+
+            int selectscan = scanner.nextInt();
+
+            if (selectscan == 1) {
+                char[] decryptWord = decryptword(encrypt, secret);
+                System.out.println("Das verschlüsselte Wort war: ");
+                for (int i = 0; i < decryptWord.length; i++) {
+                    System.out.print(decryptWord[i]);
+                }
+            }else{
+                System.out.print("Ok, das Programm wird beendet.");
+            }
+
 
         } else System.out.println("Die Verschiebung darf nur zwischen 1 und 10 sein");
 
@@ -49,24 +66,19 @@ public class Caesar {
             return encryptArray;
 
         }
-    public static char[] decryptword(int offset, char[] charArray) {
+    public static char[] decryptword ( int offset, char[] charArray){
 
-        char[] cryptArray = new char[charArray.length];
+        char[] decryptArray = new char[charArray.length];
 
-        int verschiebung;
 
         for (int i = 0; i < charArray.length; i++) {
 
-            if (charArray[i] - offset < 0)  verschiebung =
-                    charArray[i] - offset + 128;
+            int verschiebung = (charArray[i] - offset);
 
-            else verschiebung = (charArray[i] - offset)%128;
-
-
-            cryptArray[i] = (char) (verschiebung);
+            decryptArray[i] = (char) (verschiebung);
 
         }
-        return cryptArray;
+        return decryptArray;
 
     }
     }
