@@ -26,14 +26,14 @@ public class LetterCounter {
         char check = insertScan.next().charAt(0);
 
 
-        int timesLetterIsUsed = 0;
+        int timesLetterUsed = 0;
 
         for (int i = 0; i < Text1.length; i++) {
             if (Text1[i] == check) {
-                timesLetterIsUsed++;
+                timesLetterUsed++;
             }
         }
-        System.out.println("Der Buchstabe " + check + " wird " + timesLetterIsUsed + " mal benutzt.");
+        System.out.println("Der Buchstabe " + check + " wird " + timesLetterUsed + " mal benutzt.");
         return;
     }
 
