@@ -20,6 +20,14 @@ public class Main {
         c2.fuelConsumption = 8;
         c2.fuelAmount = 45;
 
+        Car c3 = new Car();
+        c3.brand = "Lamborghini";
+        c3.model = "Countach";
+        c3.serialNumber = "LC2512";
+        c3.color = "white";
+        c3.fuelConsumption = 20;
+        c3.fuelAmount = 96;
+
         System.out.println(c1.fuelAmount);
         c1.drive();
         System.out.println(c1.fuelAmount);
