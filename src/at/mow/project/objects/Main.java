@@ -25,7 +25,7 @@ public class Main {
         c3.model = "Countach";
         c3.serialNumber = "LC2512";
         c3.color = "white";
-        c3.fuelConsumption = 20;
+        c3.fuelConsumption = 19;
         c3.fuelAmount = 96;
 
         System.out.println(c1.fuelAmount);
