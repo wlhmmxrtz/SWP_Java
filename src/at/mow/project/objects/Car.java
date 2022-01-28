@@ -23,6 +23,8 @@ public class Car {
         this.color = color;
     }
 
+
+
     public void drive(){
         this.fuelAmount = this.fuelAmount - fuelConsumption;
         System.out.println(serialNumber + " Is currently diving");

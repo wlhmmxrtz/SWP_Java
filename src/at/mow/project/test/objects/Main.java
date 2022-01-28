@@ -10,6 +10,10 @@ public class Main {
 
         lamp1.turnOnAll();
 
+        lamp1.getOverallPowerUsage();
+
+        lamp1.printNamesOfLightElements();
+
 
 
 
