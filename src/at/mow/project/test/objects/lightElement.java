@@ -16,7 +16,7 @@ public class lightElement {
 
     public void powerUsage(){
         if (status == 1) {
-            this.powerConsumption = 0 + this.powerConsumption;
+            this.powerConsumption = powerConsumption + this.powerConsumption;
             System.out.println("Der Stromverbrauch ist " + this.powerConsumption);
         }
         else{
