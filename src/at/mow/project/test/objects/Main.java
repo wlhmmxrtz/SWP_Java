@@ -1,4 +1,4 @@
-javapackage at.mow.project.test.objects;
+/*javapackage at.mow.project.test.objects;
 
 import at.mow.project.test.objects.lightElement;
 import at.mow.project.test.objects.Lamp;
@@ -23,3 +23,4 @@ public class Main {
 
     }
 }
+*/

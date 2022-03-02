@@ -1,19 +1,23 @@
 package at.mow.project.objects;
 
 import java.util.Scanner;
+import at.mow.project.objects.Engine;
+import at.mow.project.objects.Tire;
 
 public class Car {
+    private Tire tires;
+    private Engine engine;
+    private int fuelConsumption;
+    private int fuelAmount;
+    private int fuelVolume;
+    private String brand;
+    private String model;
+    private String serialNumber;
+    private String color;
 
-    public int fuelConsumption;
-    public int fuelAmount;
-    public int fuelVolume;
-    public String brand;
-    public String model;
-    public String serialNumber;
-    public String color;
 
-
-    public Car(int fuelConsumption, int fuelAmount, int fuelVolume, String brand, String model, String serialNumber, String color){
+    public Car(Tire tires, Engine engine,int fuelConsumption, int fuelAmount, int fuelVolume, String brand, String model, String serialNumber, String color){
+        this.engine = engine;
         this.fuelConsumption = fuelConsumption;
         this.fuelAmount = fuelAmount;
         this.fuelVolume = fuelVolume;
@@ -26,8 +30,8 @@ public class Car {
 
 
     public void drive(){
-        this.fuelAmount = this.fuelAmount - fuelConsumption;
-        System.out.println(serialNumber + " Is currently diving");
+        this.fuelAmount = this.fuelAmount - this.fuelConsumption;
+        System.out.println(this.serialNumber + " Is currently diving");
     }
     public void brake(){
         String brake;
@@ -36,7 +40,7 @@ public class Car {
     }
 
     public void turboBoost(){
-        if(fuelVolume*0.1 < fuelAmount){
+        if(this.fuelVolume*0.1 < this.fuelAmount){
             System.out.println("SuperBoostMode activated");
         } else{
             System.out.println("Not enough fuel to go to Superboost.");
@@ -55,9 +59,75 @@ public class Car {
     }
 
     public void getRemainingRange(){
-        int remainingRange = this.fuelAmount/fuelConsumption;
+        int remainingRange = this.fuelAmount/this.fuelConsumption;
         System.out.println("There are about " + remainingRange*100 + "km of Range remaining");
     }
 
+    //getters
 
+    public int getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public int getFuelAmount() {
+        return fuelAmount;
+    }
+
+    public int getFuelVolume() {
+        return fuelVolume;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    //setters
+
+    public void setFuelConsumption(int fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
+    public void setFuelAmount(int fuelAmount) {
+        this.fuelAmount = fuelAmount;
+    }
+
+    public void setFuelVolume(int fuelVolume) {
+        this.fuelVolume = fuelVolume;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
 }

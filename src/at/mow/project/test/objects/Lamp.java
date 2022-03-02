@@ -1,4 +1,4 @@
-package at.mow.project.test.objects;
+/*package at.mow.project.test.objects;
 
 import at.mow.project.test.objects.lightElement;
 
@@ -41,3 +41,4 @@ public class Lamp {
 
 
 }
+*/
