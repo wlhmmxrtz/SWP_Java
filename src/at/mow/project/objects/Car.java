@@ -3,10 +3,12 @@ package at.mow.project.objects;
 import java.util.Scanner;
 import at.mow.project.objects.Engine;
 import at.mow.project.objects.Tire;
+import at.mow.project.objects.RearMirror;
 
 public class Car {
     private Tire tires;
     private Engine engine;
+    private RearMirror;
     private int fuelConsumption;
     private int fuelAmount;
     private int fuelVolume;
@@ -16,7 +18,7 @@ public class Car {
     private String color;
 
 
-    public Car(Tire tires, Engine engine,int fuelConsumption, int fuelAmount, int fuelVolume, String brand, String model, String serialNumber, String color){
+    public Car(int fuelConsumption, int fuelAmount, int fuelVolume, String brand, String model, String serialNumber, String color){
         this.engine = engine;
         this.fuelConsumption = fuelConsumption;
         this.fuelAmount = fuelAmount;
