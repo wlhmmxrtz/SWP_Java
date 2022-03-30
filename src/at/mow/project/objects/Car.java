@@ -18,6 +18,7 @@ public class Car {
     private String color;
 
 
+
     public Car(int fuelConsumption, int fuelAmount, int fuelVolume, String brand, String model, String serialNumber, String color){
         this.engine = engine;
         this.fuelConsumption = fuelConsumption;
