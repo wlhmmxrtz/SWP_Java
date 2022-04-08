@@ -5,6 +5,12 @@ public class Producer {
     private String country;
     private int discountPercent;
 
+    public Producer(String name, String country, int discountPercent) {
+        this.name = name;
+        this.country = country;
+        this.discountPercent = discountPercent;
+    }
+
     public String getName() {
         return name;
     }
