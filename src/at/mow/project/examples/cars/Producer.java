@@ -2,13 +2,15 @@ package at.mow.project.examples.cars;
 
 public class Producer {
     private String name;
+    private String model;
     private String country;
     private int discountPercent;
 
-    public Producer(String name, String country, int discountPercent) {
+    public Producer(String name, String model, String country, int discountPercent) {
         this.name = name;
         this.country = country;
         this.discountPercent = discountPercent;
+        this.model = model;
     }
 
     public String getName() {
@@ -33,5 +35,13 @@ public class Producer {
 
     public void setDiscountPercent(int discountPercent) {
         this.discountPercent = discountPercent;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 }
