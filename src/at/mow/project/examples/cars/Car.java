@@ -10,6 +10,7 @@ public class Car {
     private int baseFuelConsumption;
     private int basePrice;
     private Engine engine;
+    private Producer producer;
 
 
     public Car(String color, int maxSpeed, int baseFuelConsumption, int basePrice, Engine engine){
@@ -18,6 +19,7 @@ public class Car {
         this.baseFuelConsumption = baseFuelConsumption;
         this.basePrice = basePrice;
         this.engine = engine;
+        this.producer = producer;
     }
 
     public String getColor() {
@@ -58,5 +60,13 @@ public class Car {
 
     public void setEngine(Engine engine) {
         this.engine = engine;
+    }
+
+    public Producer getProducer() {
+        return producer;
+    }
+
+    public void setProducer(Producer producer) {
+        this.producer = producer;
     }
 }
