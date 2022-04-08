@@ -13,7 +13,7 @@ public class Car {
     private Producer producer;
 
 
-    public Car(String color, int maxSpeed, int baseFuelConsumption, int basePrice, Engine engine){
+    public Car(String color, int maxSpeed, int baseFuelConsumption, int basePrice, Engine engine, Producer producer){
         this.color = color;
         this.maxSpeed = maxSpeed;
         this.baseFuelConsumption = baseFuelConsumption;
