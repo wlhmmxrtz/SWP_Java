@@ -5,7 +5,7 @@ public class Engine {
     private enum FUEL {DIESEL, GASOLINE}
     private FUEL fuelType;
 
-    public Engine(int power, enum FUEL, FUEL fuelType) {
+    public Engine(int power, FUEL fuelType) {
         this.power = power;
         this.fuelType = fuelType;
     }

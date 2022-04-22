@@ -69,4 +69,8 @@ public class Car {
     public void setProducer(Producer producer) {
         this.producer = producer;
     }
+
+    public void price() {this.basePrice = this.basePrice * (this.producer.getDiscountPercent() / 100);
+        System.out.println(this.basePrice);
+    }
 }

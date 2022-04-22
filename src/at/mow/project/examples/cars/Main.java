@@ -12,5 +12,6 @@ public class Main {
         Car c1 = new Car("red", 255, 9, 65000, e1, p1);
 
 
+     c1.price();
     }
 }
