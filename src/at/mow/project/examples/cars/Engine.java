@@ -2,7 +2,7 @@ package at.mow.project.examples.cars;
 
 public class Engine {
     private int power;
-    private enum FUEL {DIESEL, GASOLINE}
+    public enum FUEL {DIESEL, GASOLINE}
     private FUEL fuelType;
 
     public Engine(int power, FUEL fuelType) {
