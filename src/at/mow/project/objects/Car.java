@@ -8,7 +8,7 @@ import at.mow.project.objects.RearMirror;
 public class Car {
     private Tire tires;
     private Engine engine;
-    private RearMirror;
+    private RearMirror mirror;
     private int fuelConsumption;
     private int fuelAmount;
     private int fuelVolume;
