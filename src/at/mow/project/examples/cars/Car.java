@@ -1,9 +1,5 @@
 package at.mow.project.examples.cars;
 
-import at.mow.project.examples.cars.Engine;
-
-import at.mow.project.examples.cars.Producer;
-
 public class Car {
     private String color;
     private int maxSpeed;
@@ -70,10 +66,14 @@ public class Car {
         this.producer = producer;
     }
 
-    public void price() {
-        double rabatt = this.producer.getDiscountPercent()/100;
-        double price = this.basePrice-(this.basePrice * rabatt);
+    public void getPrice() {
+        double price1 = getBasePrice()*this.producer.getDiscount();
+        double price2 = getBasePrice()-price1;
 
-        System.out.println("Der Endpreis beträgt " + price);
+        System.out.println(getBasePrice() + " Verkaufspreis");
+        System.out.println("    -   ");
+        System.out.println(price1 + " Rabatt");
+        System.out.println("    =   ");
+        System.out.println(price2 + " Endpreis");
     }
 }

@@ -4,12 +4,12 @@ public class Producer {
     private String name;
     private String model;
     private String country;
-    private int discountPercent;
+    private double discount;
 
-    public Producer(String name, String model, String country, int discountPercent) {
+    public Producer(String name, String model, String country, double discount) {
         this.name = name;
         this.country = country;
-        this.discountPercent = discountPercent;
+        this.discount = discount;
         this.model = model;
     }
 
@@ -29,12 +29,12 @@ public class Producer {
         this.country = country;
     }
 
-    public int getDiscountPercent() {
-        return discountPercent;
+    public double getDiscount() {
+        return discount;
     }
 
-    public void setDiscountPercent(int discountPercent) {
-        this.discountPercent = discountPercent;
+    public void setDiscount(double discount) {
+        this.discount = discount;
     }
 
     public String getModel() {
