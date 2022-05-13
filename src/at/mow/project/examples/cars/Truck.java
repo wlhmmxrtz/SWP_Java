@@ -17,4 +17,10 @@ public class Truck extends Car{
     public void setLoadingCapacity(double loadingCapacity) {
         this.loadingCapacity = loadingCapacity;
     }
+
+    @Override
+    public void drive() {
+        System.out.println("Truck is driving with " + getBaseFuelConsumption() + " consumption on 100km");
+        super.drive();
+    }
 }
