@@ -112,40 +112,45 @@ public class CoffeeMachine {
                     } else {
                         System.out.println("Zu viele Bohnen");
                     }
-                } else {
-                }
+                } else {setAmmountOfBeans(getAmmountOfBeans()+0);}
+
             } else {
                 System.out.println("Zu viel Wasser, der Tank würde überlaufen");
 
             }
-        }
+        } else {watertank.setWaterlevel(watertank.getWaterlevel()+0);}
     }
 
     public void makeCoffee() {
         if (getStatus() == 1) {
             if (watertank.getWaterlevel() != 0) {
-                if (getAmmountOfBeans() != 0){
+                if (getAmmountOfBeans() != 0) {
                     System.out.println("Wie wollen sie ihren Kaffee haben?");
                     System.out.println("Stellen sie die Stärke ein (1-10)");
+
                     Scanner strongnessScan = new Scanner(System.in);
                     int strongnessAmmount = strongnessScan.nextInt();
-                    setStrongness(strongnessAmmount);
-                    System.out.println("Auf wie viel ml soll aufgegossen werden? (n in ml)");
-                    Scanner sizeScan = new Scanner(System.in);
-                    int sizeInMl = sizeScan.nextInt();
-                    if(watertank.getWaterlevel()<sizeInMl){
-                        System.out.println("Zu wenig Wasser im Tank, starten sie neu");
-                    } else {
-                        setSize(sizeInMl);
-                        System.out.println("Der Kaffee wird mit der Stärke " + getStrongness() + " und " + getSize() + "ml Wasser gebrüht.");
-                        watertank.setWaterlevel(watertank.getWaterlevel()-sizeInMl);
-                        setAmmountOfBeans(getAmmountOfBeans()-strongnessAmmount);
+                    if (strongnessAmmount <= 10) {
+                        setStrongness(strongnessAmmount);
+                        System.out.println("Auf wie viel ml soll aufgegossen werden? (n in ml)");
+                        Scanner sizeScan = new Scanner(System.in);
+                        int sizeInMl = sizeScan.nextInt();
+                        if (sizeInMl > 200) {
+                            System.out.println("200ml ist das Maximum");
+                        } else {
+                            setSize(sizeInMl);
+                            System.out.println("Der Kaffee wird mit der Stärke " + getStrongness() + " und " + getSize() + "ml Wasser gebrüht.");
+                            watertank.setWaterlevel(watertank.getWaterlevel() - sizeInMl);
+                            setAmmountOfBeans(getAmmountOfBeans() - strongnessAmmount);
 
-                        System.out.println("Neuer Füllstand " + watertank.getWaterlevel() + "ml / Neue Anzahl Bohnen " + getAmmountOfBeans() + "g");
+                            System.out.println("Neuer Füllstand " + watertank.getWaterlevel() + "ml / Neue Anzahl Bohnen " + getAmmountOfBeans() + "g");
 
+                        }
                     }
                 }
             }
+        } else {
+            System.out.println("Kaffeemaschine ist ausgeschaltet");
         }
     }
 
