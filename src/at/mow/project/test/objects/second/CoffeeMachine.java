@@ -103,7 +103,7 @@ public class CoffeeMachine {
                 Scanner selectScan2 = new Scanner(System.in);
                 int selection2 = selectScan2.nextInt();
                 if (selection2 == 1) {
-                    System.out.println("Wie viel Bohnen möchten sie hinzugeben?");
+                    System.out.println("Wie viel Bohnen möchten sie hinzugeben? (n in g)");
                     Scanner fillupScanBeans = new Scanner(System.in);
                     int fillupAmmountBeans = fillupScanBeans.nextInt();
                     if (fillupAmmountBeans + getAmmountOfBeans() <= getAmmount()) {
@@ -141,7 +141,7 @@ public class CoffeeMachine {
                         watertank.setWaterlevel(watertank.getWaterlevel()-sizeInMl);
                         setAmmountOfBeans(getAmmountOfBeans()-strongnessAmmount);
 
-                        System.out.println("Neuer Füllstand " + watertank.getWaterlevel() + "ml / Neue Anzahl Bohnen " + getAmmountOfBeans());
+                        System.out.println("Neuer Füllstand " + watertank.getWaterlevel() + "ml / Neue Anzahl Bohnen " + getAmmountOfBeans() + "g");
 
                     }
                 }
@@ -152,6 +152,16 @@ public class CoffeeMachine {
 
     public void turnOffCoffeemachine(){
         System.out.println("Kaffeemaschine wird nach Reinigung ausgeschalten");
+
+        System.out.println("Reinigung wird Ausgeführt - 10ml Wasser werden verbraucht...");
+
+        watertank.setWaterlevel(watertank.getWaterlevel()-10);
+
+        System.out.println("Füllstand nach Reinigung: " + watertank.getWaterlevel() + "ml");
+
+        setStatus(0);
+
+        System.out.println("Status: " + getStatus() + " - Gerät ist ausgeschaltet");
 
 
     }

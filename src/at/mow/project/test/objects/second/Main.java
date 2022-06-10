@@ -41,5 +41,7 @@ public class Main {
         c1.startCoffeeMachine();
 
         c1.makeCoffee();
+
+        c1.turnOffCoffeemachine();
     }
 }
